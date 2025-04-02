@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Transactions;
-using Hangfire.PostgreSql.Factories;
+using Hangfire.CockroachDB;
+using Hangfire.CockroachDB.Factories;
 using Hangfire.PostgreSql.Tests.Utils;
 using Hangfire.Server;
 using Hangfire.Storage;

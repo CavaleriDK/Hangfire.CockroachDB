@@ -1,5 +1,6 @@
 ﻿using System;
-using Hangfire.PostgreSql.Factories;
+using Hangfire.CockroachDB;
+using Hangfire.CockroachDB.Factories;
 using Moq;
 using Npgsql;
 

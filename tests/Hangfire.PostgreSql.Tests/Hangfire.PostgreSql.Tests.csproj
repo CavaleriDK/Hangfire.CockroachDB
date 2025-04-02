@@ -14,7 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\Hangfire.PostgreSql\Hangfire.PostgreSql.csproj" />
+    <ProjectReference Include="..\..\src\Hangfire.CockroachDB\Hangfire.CockroachDB.csproj" />
   </ItemGroup>
 
   <ItemGroup>

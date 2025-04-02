@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Linq;
+using Hangfire.CockroachDB;
 using Moq;
 using Xunit;
 

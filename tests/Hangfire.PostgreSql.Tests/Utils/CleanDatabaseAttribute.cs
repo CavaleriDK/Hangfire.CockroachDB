@@ -2,6 +2,7 @@
 using System.Reflection;
 using System.Threading;
 using Dapper;
+using Hangfire.CockroachDB;
 using Npgsql;
 using Xunit.Sdk;
 

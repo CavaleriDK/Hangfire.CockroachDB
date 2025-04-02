@@ -1,7 +1,8 @@
 ﻿using System;
 using System.Globalization;
 using Hangfire.Annotations;
-using Hangfire.PostgreSql.Factories;
+using Hangfire.CockroachDB;
+using Hangfire.CockroachDB.Factories;
 using Npgsql;
 
 namespace Hangfire.PostgreSql.Tests.Utils

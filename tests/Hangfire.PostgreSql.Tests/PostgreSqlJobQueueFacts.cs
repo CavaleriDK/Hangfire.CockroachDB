@@ -5,8 +5,9 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using Dapper;
+using Hangfire.CockroachDB;
+using Hangfire.CockroachDB.Utils;
 using Hangfire.PostgreSql.Tests.Utils;
-using Hangfire.PostgreSql.Utils;
 using Hangfire.Storage;
 using Xunit;
 

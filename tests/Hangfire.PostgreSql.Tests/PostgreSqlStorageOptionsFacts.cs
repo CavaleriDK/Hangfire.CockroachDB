@@ -1,4 +1,5 @@
 ﻿using System;
+using Hangfire.CockroachDB;
 using Xunit;
 
 namespace Hangfire.PostgreSql.Tests

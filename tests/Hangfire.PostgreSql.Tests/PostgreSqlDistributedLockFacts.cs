@@ -3,6 +3,7 @@ using System.Data;
 using System.Linq;
 using System.Threading;
 using Dapper;
+using Hangfire.CockroachDB;
 using Hangfire.PostgreSql.Tests.Utils;
 using Moq;
 using Npgsql;

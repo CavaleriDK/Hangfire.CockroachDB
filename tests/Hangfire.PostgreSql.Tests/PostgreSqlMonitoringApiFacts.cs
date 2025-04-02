@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
 using Dapper;
+using Hangfire.CockroachDB;
 using Hangfire.Common;
 using Hangfire.PostgreSql.Tests.Utils;
 using Hangfire.States;

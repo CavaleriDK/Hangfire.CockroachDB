@@ -2,6 +2,7 @@
 using System.Globalization;
 using System.Linq;
 using Dapper;
+using Hangfire.CockroachDB;
 using Hangfire.PostgreSql.Tests.Utils;
 using Npgsql;
 using Xunit;

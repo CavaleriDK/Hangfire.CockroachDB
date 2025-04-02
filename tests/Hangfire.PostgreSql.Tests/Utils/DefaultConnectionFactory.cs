@@ -1,4 +1,5 @@
-﻿using Npgsql;
+﻿using Hangfire.CockroachDB;
+using Npgsql;
 
 namespace Hangfire.PostgreSql.Tests.Utils
 {

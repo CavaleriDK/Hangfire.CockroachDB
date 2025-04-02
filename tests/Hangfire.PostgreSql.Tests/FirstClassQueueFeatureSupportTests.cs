@@ -1,4 +1,5 @@
 using System.Threading;
+using Hangfire.CockroachDB;
 using Hangfire.PostgreSql.Tests.Entities;
 using Hangfire.PostgreSql.Tests.Utils;
 using Hangfire.Storage;

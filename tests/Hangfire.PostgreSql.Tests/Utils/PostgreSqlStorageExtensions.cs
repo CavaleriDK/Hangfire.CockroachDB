@@ -1,4 +1,6 @@
-﻿namespace Hangfire.PostgreSql.Tests.Utils
+﻿using Hangfire.CockroachDB;
+
+namespace Hangfire.PostgreSql.Tests.Utils
 {
   internal static class PostgreSqlStorageExtensions
   {
