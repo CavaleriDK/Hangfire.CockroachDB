@@ -291,8 +291,6 @@ namespace Hangfire.CockroachDB
 	        WHERE ""updatedrows"".""key"" = ""insertvalues"".""key"" 
 	        AND ""updatedrows"".""field"" = ""insertvalues"".""field""
         );
-
-        RESET enable_multiple_modifications_of_table;
       ";
       foreach (KeyValuePair<string, string> keyValuePair in keyValuePairs)
       {

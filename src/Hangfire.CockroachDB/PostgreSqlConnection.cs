@@ -264,8 +264,6 @@ namespace Hangfire.CockroachDB
           WHERE ""updatedrows"".""jobid"" = ""insertvalues"".""jobid"" 
           AND ""updatedrows"".""name"" = ""insertvalues"".""name""
         );
-
-        RESET enable_multiple_modifications_of_table;
       ";
 
       _storage.UseConnection(_dedicatedConnection, connection => connection
@@ -371,6 +369,9 @@ namespace Hangfire.CockroachDB
       }
 
       string sql = $@"
+        -- 0A000: multiple mutations of the same table ""server"" are not supported unless they all use INSERT without ON CONFLICT; this is to prevent data corruption, see documentation of sql.multiple_modifications_of_table.enabled
+        SET enable_multiple_modifications_of_table = true;
+
         WITH ""inputvalues"" AS (
           SELECT @Key ""key"", @Field ""field"", @Value ""value""
         ), ""updatedrows"" AS ( 
@@ -477,8 +478,6 @@ namespace Hangfire.CockroachDB
           FROM ""updatedrows"" 
           WHERE ""updatedrows"".""id"" = ""insertvalues"".""id"" 
         );
-
-        RESET enable_multiple_modifications_of_table;
       ";
 
       _storage.UseConnection(_dedicatedConnection, connection => connection
