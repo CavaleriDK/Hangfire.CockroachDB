@@ -3,25 +3,25 @@
   <PropertyGroup>
     <Description>CockroachDB storage implementation for Hangfire (background job system for ASP.NET and aspnet core applications).</Description>
     <Copyright>Copyright © 2014-2024 Frank Hommers and others</Copyright>
-    <AssemblyTitle>Hangfire PostgreSql Storage</AssemblyTitle>
-    <VersionPrefix>1.9.4</VersionPrefix>
+    <AssemblyTitle>Hangfire CockroachDB Storage</AssemblyTitle>
+    <VersionPrefix>1.0.0</VersionPrefix>
     <Authors>Frank Hommers, Vytautas Kasparavičius, Žygimantas Arūna</Authors>
     <TargetFramework>netstandard2.0</TargetFramework>
     <AssemblyName>Hangfire.CockroachDB</AssemblyName>
     <OutputType>Library</OutputType>
     <PackageTags>Hangfire;CockroachDB;Cockroach</PackageTags>
-    <PackageId>Hangfire.CockroachDB</PackageId>
+    <PackageId>CavaleriDK.Hangfire.CockroachDB</PackageId>
     <PackageReleaseNotes>https://github.com/CavaleriDK/Hangfire.CockroachDB/releases</PackageReleaseNotes>
     <PackageProjectUrl>https://github.com/CavaleriDK/Hangfire.CockroachDB</PackageProjectUrl>
     <PackageLicenseUrl></PackageLicenseUrl>
-    <Version>1.9.4.0</Version>
-    <FileVersion>1.9.4.0</FileVersion>
-    <AssemblyVersion>1.9.4.0</AssemblyVersion>
+    <Version>1.0.0.0</Version>
+    <FileVersion>1.0.0.0</FileVersion>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
     <RepositoryUrl>https://github.com/CavaleriDK/Hangfire.CockroachDB</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
-    <Company>https://github.com/CavaleriDK/Hangfire.CockroachDB</Company>
+    <Company>https://github.com/hangfire-postgres</Company>
     <LangVersion>default</LangVersion>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <NoWarn>$(NoWarn);1591</NoWarn>
@@ -35,10 +35,6 @@
 
   <ItemGroup>
     <PackageReference Include="Dapper" Version="2.0.123" />
-    <PackageReference Include="GitVersion.MsBuild" Version="5.11.1">
-      <PrivateAssets>all</PrivateAssets>
-      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-    </PackageReference>
     <PackageReference Include="Hangfire.Core" Version="1.8.14" />
     <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
     <PackageReference Include="Npgsql" Version="8.0.3" />
