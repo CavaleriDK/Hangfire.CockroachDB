@@ -139,7 +139,7 @@ namespace Hangfire.CockroachDB
 
     public override void WriteOptionsToLog(ILog logger)
     {
-      logger.Info("Using the following options for PostgreSQL job storage:");
+      logger.Info("Using the following options for CockroachDB job storage:");
       logger.InfoFormat("    Queue poll interval: {0}.", Options.QueuePollInterval);
       logger.InfoFormat("    Invisibility timeout: {0}.", Options.InvisibilityTimeout);
       logger.InfoFormat("    Use sliding invisibility timeout: {0}.", Options.UseSlidingInvisibilityTimeout);
@@ -166,7 +166,7 @@ namespace Hangfire.CockroachDB
         builder.Append("Schema: ");
         builder.Append(Options.SchemaName);
 
-        return builder.Length != 0 ? $"PostgreSQL Server: {builder}" : canNotParseMessage;
+        return builder.Length != 0 ? $"CockroachDB Server: {builder}" : canNotParseMessage;
       }
       catch (Exception)
       {
