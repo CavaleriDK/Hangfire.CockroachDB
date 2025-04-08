@@ -1,8 +1,8 @@
-# Hangfire.PostgreSql
+# Hangfire.CockroachDB
 
 [![Build status](https://github.com/hangfire-postgres/Hangfire.PostgreSql/actions/workflows/pack.yml/badge.svg)](https://github.com/hangfire-postgres/Hangfire.PostgreSql/actions/workflows/pack.yml) [![GitHub release (latest by date)](https://img.shields.io/github/v/release/hangfire-postgres/Hangfire.PostgreSql?label=Release)](https://github.com/hangfire-postgres/Hangfire.PostgreSql/releases/latest) [![Nuget](https://img.shields.io/nuget/v/Hangfire.PostgreSql?label=NuGet)](https://www.nuget.org/packages/Hangfire.PostgreSql)
 
-This is an plugin to the Hangfire to enable PostgreSQL as a storage system.
+This is an plugin to the Hangfire to enable CockroachDB as a storage system.
 Read about hangfire here: https://github.com/HangfireIO/Hangfire#overview
 and here: http://hangfire.io/
 
@@ -12,7 +12,7 @@ and here: http://hangfire.io/
 
 Install Hangfire, see https://github.com/HangfireIO/Hangfire#installation
 
-Download all files from this repository, add the Hangfire.PostgreSql.csproj to your solution.
+Download all files from this repository, add the Hangfire.CockroachDB.csproj to your solution.
 Reference it in your project, and you are ready to go by using:
 
 ```csharp
@@ -26,16 +26,15 @@ app.UseHangfireDashboard();
 First, NuGet package needs installation.
 
 - Hangfire.AspNetCore
-- Hangfire.PostgreSql (Uses Npgsql 6)
-- Hangfire.PostgreSql.Npgsql5 (Uses Npgsql 5)
+- Hangfire.CockroachDB (Uses Npgsql 8)
 
-Historically both packages were functionally the same up until the package version 1.9.11, the only difference was the underlying Npgsql dependency version. Afterwards, the support for Npgsql v5 has been dropped and now minimum required version is 6.0.0.
+Historically both packages were functionally the same up until the package version 1.9.11, the only difference was the underlying Npgsql dependency version. Afterwards, the support for Npgsql v5 has been dropped and now minimum required version is 8.0.0.
 
 In `Startup.cs` _ConfigureServices(IServiceCollection services)_ method add the following line:
 
 ```csharp
 services.AddHangfire(config =>
-    config.UsePostgreSqlStorage(c =>
+    config.UseCockroachDbStorage(c =>
         c.UseNpgsqlConnection(Configuration.GetConnectionString("HangfireConnection"))));
 ```
 
@@ -48,7 +47,7 @@ app.UseHangfireDashboard();
 
 And... That's it. You are ready to go.
 
-If you encounter any issues/bugs or have idea of a feature regarding Hangfire.Postgresql, [create us an issue](https://github.com/hangfire-postgres/Hangfire.PostgreSql/issues/new). Thanks!
+If you encounter any issues/bugs or have idea of a feature regarding Hangfire.CockroachDB, [create us an issue](https://github.com/CavaleriDK/Hangfire.CockroachDB/issues/new). Thanks!
 
 ### Enabling SSL support
 

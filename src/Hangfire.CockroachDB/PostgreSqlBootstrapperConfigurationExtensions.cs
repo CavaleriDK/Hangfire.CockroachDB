@@ -33,7 +33,7 @@ namespace Hangfire.CockroachDB
     /// </summary>
     /// <param name="configuration">Configuration</param>
     /// <param name="connectionString">Connection string</param>
-    [Obsolete("Will be removed in 2.0. Please use UsePostgreSqlStorage(Action<PostgreSqlBootstrapperOptions>) overload.")]
+    [Obsolete("Will be removed in 2.0. Please use UseCockroachDbStorage(Action<PostgreSqlBootstrapperOptions>) overload.")]
     public static IGlobalConfiguration<PostgreSqlStorage> UseCockroachDbStorage(
       this IGlobalConfiguration configuration,
       string connectionString)
@@ -49,7 +49,7 @@ namespace Hangfire.CockroachDB
     /// <param name="configuration">Configuration</param>
     /// <param name="connectionString">Connection string</param>
     /// <param name="options">Advanced options</param>
-    [Obsolete("Will be removed in 2.0. Please use UsePostgreSqlStorage(Action<PostgreSqlBootstrapperOptions>, PostgreSqlStorageOptions) overload.")]
+    [Obsolete("Will be removed in 2.0. Please use UseCockroachDbStorage(Action<PostgreSqlBootstrapperOptions>, PostgreSqlStorageOptions) overload.")]
     public static IGlobalConfiguration<PostgreSqlStorage> UseCockroachDbStorage(
       this IGlobalConfiguration configuration,
       string connectionString,
@@ -67,7 +67,7 @@ namespace Hangfire.CockroachDB
     /// <param name="connectionString">Connection string</param>
     /// <param name="connectionSetup">Optional setup action to apply to created connections</param>
     /// <param name="options">Advanced options</param>
-    [Obsolete("Will be removed in 2.0. Please use UsePostgreSqlStorage(Action<PostgreSqlBootstrapperOptions>, PostgreSqlStorageOptions) overload.")]
+    [Obsolete("Will be removed in 2.0. Please use UseCockroachDbStorage(Action<PostgreSqlBootstrapperOptions>, PostgreSqlStorageOptions) overload.")]
     public static IGlobalConfiguration<PostgreSqlStorage> UseCockroachDbStorage(
       this IGlobalConfiguration configuration,
       string connectionString,
@@ -85,7 +85,7 @@ namespace Hangfire.CockroachDB
     /// <param name="configuration">Configuration</param>
     /// <param name="connectionFactory">Connection factory</param>
     /// <param name="options">Advanced options</param>
-    [Obsolete("Will be removed in 2.0. Please use UsePostgreSqlStorage(Action<PostgreSqlBootstrapperOptions>, PostgreSqlStorageOptions) overload.")]
+    [Obsolete("Will be removed in 2.0. Please use UseCockroachDbStorage(Action<PostgreSqlBootstrapperOptions>, PostgreSqlStorageOptions) overload.")]
     public static IGlobalConfiguration<PostgreSqlStorage> UseCockroachDbStorage(
       this IGlobalConfiguration configuration,
       IConnectionFactory connectionFactory,
@@ -101,7 +101,7 @@ namespace Hangfire.CockroachDB
     /// </summary>
     /// <param name="configuration">Configuration</param>
     /// <param name="connectionFactory">Connection factory</param>
-    [Obsolete("Will be removed in 2.0. Please use UsePostgreSqlStorage(Action<PostgreSqlBootstrapperOptions>) overload.")]
+    [Obsolete("Will be removed in 2.0. Please use UseCockroachDbStorage(Action<PostgreSqlBootstrapperOptions>) overload.")]
     public static IGlobalConfiguration<PostgreSqlStorage> UseCockroachDbStorage(
       this IGlobalConfiguration configuration,
       IConnectionFactory connectionFactory)
