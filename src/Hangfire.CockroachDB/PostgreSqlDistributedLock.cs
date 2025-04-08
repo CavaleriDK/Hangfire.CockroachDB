@@ -167,7 +167,7 @@ namespace Hangfire.CockroachDB
             trx = TransactionLockHandler.BeginTransactionIfNotPresent(connection);
           }
 
-          DateTime timeout = onlyExpired ? DateTime.UtcNow - options.DistributedLockTimeout : DateTime.MaxValue;
+          DateTime timeout = onlyExpired ? DateTime.UtcNow - options.DistributedLockTimeout : DateTime.UtcNow.AddYears(100);
 
           int rowsAffected = connection.Execute($@"DELETE FROM ""{options.SchemaName}"".""lock"" WHERE ""resource"" = @Resource AND ""acquired"" < @Timeout",
             new {
