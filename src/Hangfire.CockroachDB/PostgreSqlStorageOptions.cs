@@ -127,6 +127,13 @@ namespace Hangfire.CockroachDB
     public bool EnableLongPolling { get; set; }
 
     /// <summary>
+    ///   Disables CockroachDB's autocommit_before_ddl behavior during schema installation.
+    ///   CockroachDB auto-commits transactions before DDL statements by default, which causes
+    ///   the installer's explicit Commit() to fail. Enable this when using CockroachDB newer versions of CockroachDB.
+    /// </summary>
+    public bool DisableAutoCommitBeforeDdl { get; set; }
+
+    /// <summary>
     ///   Apply a sliding invisibility timeout where the last fetched time is continually updated in the background.
     ///   This allows a lower invisibility timeout to be used with longer running jobs
     ///   IMPORTANT: If <see cref="BackgroundJobServerOptions.IsLightweightServer" /> option is used, then sliding invisiblity timeouts will not work

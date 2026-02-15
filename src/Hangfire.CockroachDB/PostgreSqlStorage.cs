@@ -90,7 +90,7 @@ namespace Hangfire.CockroachDB
         NpgsqlConnection connection = CreateAndOpenConnection();
         try
         {
-          PostgreSqlObjectsInstaller.Install(connection, options.SchemaName);
+          PostgreSqlObjectsInstaller.Install(connection, options.SchemaName, options.DisableAutoCommitBeforeDdl);
         }
         finally
         {

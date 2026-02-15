@@ -34,7 +34,7 @@ namespace Hangfire.CockroachDB
   {
     private static readonly ILog _logger = LogProvider.GetLogger(typeof(PostgreSqlStorage));
 
-    public static void Install(NpgsqlConnection connection, string schemaName = "hangfire")
+    public static void Install(NpgsqlConnection connection, string schemaName = "hangfire", bool disableAutoCommitBeforeDdl = false)
     {
       if (connection == null)
       {
@@ -69,6 +69,12 @@ namespace Hangfire.CockroachDB
 
               try
               {
+                  if (disableAutoCommitBeforeDdl)
+                  {
+                      using NpgsqlCommand disableAutoCommit = new("SET autocommit_before_ddl = off", connection);
+                      disableAutoCommit.ExecuteNonQuery();
+                  }
+
                   using NpgsqlTransaction transaction = connection.BeginTransaction(IsolationLevel.Serializable);
                   using NpgsqlCommand command = new(script, connection, transaction);
                   command.CommandTimeout = 120;
